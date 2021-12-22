@@ -1,0 +1,20 @@
+---
+# defaults file for cortex_tools
+cortex_tools_ver: 0.10.7
+cortex_tools_mirror: https://github.com/grafana/cortex-tools/releases/download
+cortex_tools_os: linux
+cortex_tools_arch: amd64
+cortex_tools_parent_install_dir: /usr/local
+cortex_tools_checksums:
+  # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/checksums.txt
+  '0.10.7':
+    # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/cortextool_0.10.7_darwin_amd64.tar.gz
+    darwin_amd64: sha256:b4f52472bebaafc3e7a06d38867e58820c0403ab174186af8cfa8d486728a6fe
+    # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/cortextool_0.10.7_darwin_arm64.tar.gz
+    darwin_arm64: sha256:5a1fd8bbb72aded3e9a00e59727ccec0e66477b3d197ec8f5299c37752a4e5df
+    # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/cortextool_0.10.7_linux_amd64.tar.gz
+    linux_amd64: sha256:9978bf2923c562ffd8da30efcb9bf3a459af9609c9a234aab385aeb18fcf742e
+    # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/cortextool_0.10.7_windows_i386.zip
+    windows_i386: sha256:057e1ca9e0682ac680f8667dd15caf9770e5505de22a7d85ab970fca1d95a2b8
+    # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/cortextool_0.10.7_windows_x86_64.zip
+    windows_x86_64: sha256:e0d4f469b2aa4d72bcfa964b60fb08e3df462a3f50e5708a18ce6330ecf4229d

@@ -1,0 +1,11 @@
+---
+# vars file for cortex_tools
+cortex_tools_platform: '{{ cortex_tools_os }}_{{ cortex_tools_arch }}'
+cortex_tools_name: cortextool_{{ cortex_tools_ver }}_{{ cortex_tools_platform }}
+cortex_tools_archive: '{{ cortex_tools_name }}.{{ cortex_tools_archive_type | default("tar.gz") }}'
+cortex_tools_url: '{{ cortex_tools_mirror }}/v{{ cortex_tools_ver }}/{{ cortex_tools_archive }}'
+cortex_tools_tmp_archive: /tmp/{{ cortex_tools_archive }}
+cortex_tools_checksum: '{{ cortex_tools_checksums[cortex_tools_ver][cortex_tools_platform] }}'
+cortex_tools_install_dir: '{{ cortex_tools_parent_install_dir }}/{{ cortex_tools_name }}'
+cortex_tools_exe: '{{ cortex_tools_install_dir }}/cortextool'
+cortex_tools_link: '{{ cortex_tools_parent_install_dir }}/bin/cortextool'
