@@ -2,8 +2,11 @@
 # defaults file for cortex_tools
 cortex_tools_ver: 0.10.7
 cortex_tools_mirror: https://github.com/grafana/cortex-tools/releases/download
-cortex_tools_os: linux
-cortex_tools_arch: amd64
+cortex_tools_arch_map:
+  386: i386
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 cortex_tools_parent_install_dir: /usr/local
 cortex_tools_checksums:
   # https://github.com/grafana/cortex-tools/releases/download/v0.10.7/checksums.txt
