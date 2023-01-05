@@ -32,6 +32,3 @@ galaxy_info:
   galaxy_tags:
     - development
   role_name: cortex_tools
-
-dependencies:
-  - andrewrothstein.unarchive-deps
