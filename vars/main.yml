@@ -8,7 +8,7 @@ cortex_tools_url: |-
   {{- cortex_tools_dotexe | default("") }}
 
 cortex_tools_exe: |-
-  {{- cortex_tools_install_dir }}/cortextool-{{ cortex_tools_ver }}-{{ cortex_tools_platform }}.
+  {{- cortex_tools_install_dir }}/cortextool-{{ cortex_tools_ver }}-{{ cortex_tools_platform }}
   {{- cortex_tools_dotexe | default("") }}
 
 cortex_tools_checksum: '{{ cortex_tools_checksums[cortex_tools_ver][cortex_tools_platform] }}'
