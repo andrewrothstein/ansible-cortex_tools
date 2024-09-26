@@ -8,12 +8,12 @@ dl() {
     local lchecksums=$2
     local os=$3
     local arch=$4
-    local archive_type=${5:-tar.gz}
-    local platform="${os}_${arch}"
-    local file="cortextool_${ver}_${platform}.${archive_type}"
+    local dotexe=${5:-}
+    local platform="${os}-${arch}"
+    local file="cortextool-${platform}${dotexe}"
     local url="$MIRROR/v$ver/$file"
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksums | awk '{print $1}')
+    printf "    %s: sha256:%s\n" $platform $(grep -e "$file\$" $lchecksums | awk '{print $1}')
 }
 
 dl_ver() {
@@ -33,6 +33,7 @@ dl_ver() {
     dl $ver $lchecksums darwin amd64
     dl $ver $lchecksums darwin arm64
     dl $ver $lchecksums linux amd64
+    dl $ver $lchecksums windows amd64 .exe
 }
 
-dl_ver ${1:-0.11.0}
+dl_ver ${1:-0.11.2}

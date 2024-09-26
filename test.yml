@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.cortex_tools
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/bin/cortextool version
+    - name: Executing 'cortextool version'
+      ansible.builtin.command: /usr/local/bin/cortextool version
+      changed_when: false
       register: cortex_tools_test_output
-    - name: cortextool version
-      debug:
+    - name: Output from 'cortextool version'
+      ansible.builtin.debug:
         msg: '{{ cortex_tools_test_output.stdout }}'
